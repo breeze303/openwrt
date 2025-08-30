@@ -7,7 +7,8 @@ airoha_setup_interfaces()
 	local board="$1"
 
 	case "$board" in
-		gemtek,w1700k)
+		gemtek,w1700k|\
+		gemtek,w1701k)
 			#ucidef_set_interfaces_lan_wan "lan1 lan2 10g-lan2" 10g-wan
 			ucidef_set_interface_lan "lan1 lan2"
 		;;
